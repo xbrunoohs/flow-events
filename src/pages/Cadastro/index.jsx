@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import homeBg from "../../assets/home/background.png";
 import ButtonSecondary from "../../components/Button/ButtonSecondary";
 import Footer from "../../components/Footer";
@@ -8,7 +8,7 @@ import Main from "../../components/Main";
 import "./style.css";
 
 export const Cadastro = () => {
-    const [formData, setFormData] = useState({
+    const [cadastroData, setcadastroData] = useState({
         nome: "",
         email: "",
         senha: "",
@@ -16,33 +16,51 @@ export const Cadastro = () => {
     });
 
     const [erroSenha, setErroSenha] = useState("");
+    const [storageData, setStorageData] = useState([]);
 
-    // Manipula as mudanças dos inputs
+    useEffect(() => {
+        const data = [];
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            const value = localStorage.getItem(key);
+            data.push({ key, value });
+        }
+        setStorageData(data);
+    }, []);
+
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData((prevData) => ({
+        setcadastroData((prevData) => ({
             ...prevData,
             [name]: value,
         }));
 
         if (name === "senha" || name === "confirmarSenha") {
             setErroSenha(
-                formData.senha !== formData.confirmarSenha
+                cadastroData.senha !== cadastroData.confirmarSenha
                     ? "As senhas não coincidem"
                     : ""
             );
         }
     };
 
-    // Salva os dados no localStorage
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (formData.senha !== formData.confirmarSenha) {
+        if (cadastroData.senha !== cadastroData.confirmarSenha) {
             setErroSenha("As senhas não coincidem");
             return;
         }
-        localStorage.setItem("formData", JSON.stringify(formData));
-        console.log("Dados do formulário enviados e salvos:", formData);
+        localStorage.setItem("cadastroData", JSON.stringify(cadastroData));
+        console.log("Dados do formulário enviados e salvos:", cadastroData);
+
+        // Atualizar os dados do localStorage na tabela
+        const data = [];
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            const value = localStorage.getItem(key);
+            data.push({ key, value });
+        }
+        setStorageData(data);
     };
 
     return (
@@ -59,21 +77,21 @@ export const Cadastro = () => {
                             name="nome"
                             label={"Usuário"}
                             type={"text"}
-                            value={formData.nome}
+                            value={cadastroData.nome}
                             onChange={handleChange}
                         />
                         <Input
                             name="email"
                             label={"Email"}
                             type={"email"}
-                            value={formData.email}
+                            value={cadastroData.email}
                             onChange={handleChange}
                         />
                         <Input
                             name="senha"
                             label={"Senha"}
                             type={"password"}
-                            value={formData.senha}
+                            value={cadastroData.senha}
                             onChange={handleChange}
                         >
                             <p>
@@ -84,7 +102,7 @@ export const Cadastro = () => {
                             name="confirmarSenha"
                             label={"Confirmar Senha"}
                             type={"password"}
-                            value={formData.confirmarSenha}
+                            value={cadastroData.confirmarSenha}
                             onChange={handleChange}
                         >
                             <p>
@@ -95,6 +113,7 @@ export const Cadastro = () => {
                         <p style={{ color: "red" }}>{erroSenha}</p>
                         <ButtonSecondary type="submit">Salvar</ButtonSecondary>
                     </form>
+
                 </div>
             </Main>
             <Footer />

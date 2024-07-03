@@ -1,0 +1,32 @@
+.storage {
+    font-size: larger;
+    margin: 150px;
+    padding: 100px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 7px;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+thead {
+    font-size: large;
+}
+
+td {
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-left: 50px;
+}
+
+table {
+    padding-bottom: 150px;
+
+}
+
+th {
+    padding: 50px;
+}

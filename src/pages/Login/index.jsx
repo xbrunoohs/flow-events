@@ -10,14 +10,14 @@ import "./style.css";
 
 export default function Login() {
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
+  const [cadastroData, setcadastroData] = useState({
     email: "",
     senha: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
+    setcadastroData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
@@ -25,8 +25,8 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    localStorage.setItem("loginData", JSON.stringify(formData));
-    console.log("Dados do formulário enviados e salvos:", formData);
+    localStorage.setItem("loginData", JSON.stringify(cadastroData));
+    console.log("Dados do formulário enviados e salvos:", cadastroData);
     // TODO: Adicionar lógica de login
     navigate("/feed/felipe");
   };
@@ -45,14 +45,14 @@ export default function Login() {
               name="email"
               label={"Email"}
               type={"email"}
-              value={formData.email}
+              value={cadastroData.email}
               onChange={handleChange}
             />
             <Input
               name="senha"
               label={"Senha"}
               type={"password"}
-              value={formData.senha}
+              value={cadastroData.senha}
               onChange={handleChange}
             />
             <ButtonSecondary type="submit">Avançar</ButtonSecondary>

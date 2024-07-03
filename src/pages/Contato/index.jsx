@@ -10,7 +10,7 @@ import "./style.css";
 
 export const Contato = () => {
    
-    const [formData, setFormData] = useState({
+    const [cadastroData, setcadastroData] = useState({
         name: '',
         email: '',
         phone: '', 
@@ -18,19 +18,19 @@ export const Contato = () => {
     });
   
     const handleChange = (e) => {
-      setFormData({
-        ...formData,
+      setcadastroData({
+        ...cadastroData,
         [e.target.name]: e.target.value,
       });
     };
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      console.log('Dados do formulário:', formData);
+      console.log('Dados do formulário:', cadastroData);
 
       alert('Formulário enviado com sucesso!');
 
-      setFormData({
+      setcadastroData({
         name: '',
         email: '',
         phone: '',
@@ -52,27 +52,27 @@ export const Contato = () => {
                             name="nome"
                             label={"Usuário"}
                             type={"name"}
-                            value={formData.nome}
+                            value={cadastroData.nome}
                             onChange={handleChange}
                         />
                         <Input
                             name="email"
                             label={"Email"}
                             type={"email"}
-                            value={FormData.email}
+                            value={cadastroData.email}
                             onChange={handleChange}
                         />
                         <Input
                             name="phone"
                             label={"Telefone"}
                             type={"tel"}
-                            value={formData.phone}
+                            value={cadastroData.phone}
                             onChange={handleChange}
                         />
                         <Textarea
                             name="mensage"
                             label="Mensagem"
-                            value={formData.mensagem}
+                            value={cadastroData.mensagem}
                             onChange={handleChange}
                         />
                         <ButtonSecondary>Enviar</ButtonSecondary>
