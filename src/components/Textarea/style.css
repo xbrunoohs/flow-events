@@ -1,0 +1,52 @@
+/* Adicione estas regras CSS para estilizar o componente Textarea com base no Input */
+
+.textareaContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    gap: 4px;
+    font-family: "Oxygen", sans-serif;
+    font-size: 1.6rem;
+}
+  
+.textareaContainer * {
+    font-size: 1.4rem;
+}
+  
+.textareaElement {
+    position: relative;
+    margin: 0;
+}
+  
+.textareaElement textarea {
+    box-sizing: border-box;
+    width: 100%;
+    font-family: inherit;
+    padding: 16px 20px 0 20px;
+    min-height: 150px; /* Ajuste a altura conforme necessário */
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background-color: #444;
+    color: #ffffff;
+}
+  
+.textareaFloatingLabel {
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    top: 25%;
+    left: 20px;
+    font-size: 1.8rem;
+    cursor: text;
+    color: #8c8c8c;
+    transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+}
+  
+textarea:focus ~ .textareaFloatingLabel {
+    font-size: 1.1rem;
+    top: 7px;
+}
+  

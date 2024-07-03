@@ -1,0 +1,59 @@
+.reviewCardContainer {
+  display: flex;
+  width: 302px;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+
+  border-radius: 16px;
+  background: #111;
+}
+
+.reviewCardImage {
+  width: 78px;
+  height: 78px;
+
+  /* border-radius: 78px;
+  border: 3px solid #5200ff;
+  background: url(<path-to-image>),
+    lightgray -76.395px -50.807px / 315.014% 471.795% no-repeat, #d9d9d9; */
+}
+
+.reviewCardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.reviewCardName {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.reviewCardNameTrailingContent {
+  font-family: Poppins;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 60px */
+  letter-spacing: -3.6px;
+
+  background: linear-gradient(165deg, #db00ff 10.37%, #ff00c7 136.86%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.reviewCardContent p {
+  align-self: stretch;
+
+  color: #fff;
+  font-family: Poppins;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

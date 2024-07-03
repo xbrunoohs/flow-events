@@ -1,0 +1,56 @@
+input {
+  color: #fff;
+  outline: none;
+  caret-color: #fff;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  gap: 4px;
+
+  font-family: "Oxygen", sans-serif;
+  font-size: 1.6rem;
+}
+.inputContainer * {
+  font-size: 1.4rem;
+}
+
+.inputElement {
+  position: relative;
+  margin: 0;
+}
+.inputElement input {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: inherit;
+  padding: 16px 20px 0 20px;
+  height: 50px;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #444;
+  color: #ffffff;
+}
+.inputFloatingLabel {
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  top: 25%;
+  left: 20px;
+  font-size: 1.8rem;
+  cursor: text;
+  color: #8c8c8c;
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease,
+    -webkit-transform 0.1s ease, -moz-transform 0.1s ease,
+    -o-transform 0.1s ease;
+}
+
+input:not(:placeholder-shown) ~ .inputFloatingLabel,
+input:focus ~ .inputFloatingLabel {
+  font-size: 1.1rem;
+  top: 7px;
+}

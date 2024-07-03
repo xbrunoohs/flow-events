@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Fugaz One", sans-serif;
+  font-family: "Outfit", sans-serif;
+  font-family: "Oxygen", sans-serif;
+  font-family: "Poppins", sans-serif;
+
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 62.5%;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0a080f;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  scroll-snap-type: y mandatory;
+}
+
+body > div {
+  width: 100vw;
+}
+
+h1 {
+  color: #fff;
+  font-family: Fugaz One;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.92px;
+}
+
+h2 {
+  color: #fff;
+  font-family: Fugaz One;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+p {
+  color: #fff;
+  font-family: Oxygen;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: Oxygen;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

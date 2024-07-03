@@ -1,0 +1,89 @@
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Remove excess padding and border in Firefox 4+ */
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.buttonLink {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.buttonPrimary {
+  display: flex;
+  /* width: 115px;
+  height: 44px; */
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  color: #0e0e0e;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 4px 148px 0px rgba(143, 0, 255, 0.25);
+}
+
+.buttonSecondary {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 22.4px */
+
+  /* // TODO como tava antes */
+  /* width: Fixed (322px);
+  height: Fixed (100px);
+  top: 2424px;
+  left: 973px;
+  padding: 8px, 12px, 8px, 12px; */
+
+  padding: 16px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+
+  border-radius: 8px;
+  background: linear-gradient(98.36deg, #a53eff -7.66%, #ff00e6 133.19%);
+}

@@ -1,0 +1,38 @@
+.carousel-custom-wrapper {
+  position: relative;
+  height: 90vh;
+  width: 90vw;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.carousel-custom {
+  position: absolute;
+  width: 100%;
+}
+.carousel-custom-card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-custom-card {
+  display: relative;
+  /* background-color: rgb(119, 30, 72); */
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+  border-radius: 16px;
+  height: 700px;
+  width: 1213px;
+
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: flex-end;
+}
+
+.carousel-custom-card > button {
+  width: 25%;
+}

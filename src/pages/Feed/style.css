@@ -1,0 +1,12 @@
+.feed-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  margin: 24px auto;
+}
+
+.feed-carousel-container {
+  margin: 24px auto;
+  scroll-snap-align: end;
+}

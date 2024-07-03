@@ -1,0 +1,51 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 84px;
+
+  width: 100%;
+  padding: 64px 108px;
+
+  background: radial-gradient(
+    433.98% 97.19% at 50% 100%,
+    rgba(23, 22, 22, 0.02) 0%,
+    #171616 100%
+  );
+}
+
+footer > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.footerTopSectionRight {
+  display: flex;
+  flex-direction: row;
+  gap: 106px;
+}
+
+.footerTopSectionRight > div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footerTopSection a {
+  font-family: "Outfit", sans-serif;
+}
+
+.footerTopSection p {
+  font-size: 2.4rem;
+  font-family: "Outfit", sans-serif;
+}
+
+.footerBottomSection p {
+  font-size: 1.4rem;
+}
+
+.footerBottomSectionRight {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
