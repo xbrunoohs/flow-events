@@ -26,7 +26,7 @@ npm install -g yarn
 open project folder
 
 ```console
-cd projeto-integrador-II
+cd flow-events
 ```
 
 install all the dependencies
